@@ -1,0 +1,44 @@
+[project]
+name = "azure-acs-gpt-4o-realtime"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "azure-communication-callautomation==1.4.0b1",
+    "azure-communication-identity>=1.5.0",
+    "azure-eventgrid>=4.21.0",
+    "azure-identity>=1.19.0",
+    "gunicorn>=23.0.0",
+    "python-dotenv>=1.0.1",
+    "quart>=0.19.9",
+    "rtclient",
+    "uvicorn>=0.32.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pre-commit>=4.0.1",
+    "ruff>=0.6.9",
+]
+
+[tool.uv.sources]
+rtclient = { git = "https://github.com/Azure-Samples/aoai-realtime-audio-sdk.git", subdirectory = "python", rev = "py/v0.5.3" }
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+ignore = ["E501"] # Line too long
