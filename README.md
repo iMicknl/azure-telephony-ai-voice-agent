@@ -1,3 +1,3 @@
+# Azure Telephony AI Voice Agent
 
-
-uv add "git+https://github.com/Azure-Samples/aoai-realtime-audio-sdk.git@py/v0.5.3#subdirectory=python"
+AI Voice agent built with Azure Communication Services and GPT-4o-realtime.
