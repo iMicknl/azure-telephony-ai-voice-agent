@@ -24,7 +24,7 @@ This project leverages identity-based authentication, for example with Azure CLI
 az login
 ```
 
-### Create DevTunnel (one-time only)
+### Create DevTunnel (first time only)
 
 The DevTunnel CLI is a tool that allows you to create a secure tunnel to your local development environment. This allows you to expose your local development environment to Azure Communication Services without having to deploy your code to a public server.
 
@@ -32,12 +32,11 @@ The DevTunnel CLI is a tool that allows you to create a secure tunnel to your lo
 devtunnel login # or devtunnel login -g
 devtunnel create -a
 devtunnel port create -p 5000
-devtunnel host
 ```
 
 Set your HOSTNAME in the `.env` file to the hostname provided by DevTunnel.
 
-### Start DevTunnel
+### Start existing DevTunnel
 
 ```bash
 devtunnel host
