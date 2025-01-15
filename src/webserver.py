@@ -264,7 +264,7 @@ class WebServer:
                             prefix_padding_ms=400,
                             silence_duration_ms=700,
                         ),
-                        voice="alloy",
+                        voice="shimmer",
                         input_audio_format="pcm16",
                         output_audio_format="pcm16",
                         # It's also common for applications to require input transcription. Input transcripts are not produced by default,
@@ -288,6 +288,7 @@ class WebServer:
                                 "description": "Can be used to stop / end the call with the user, when the user confirms you to do so or the conversation is over.",
                             },
                         ],
+                        modalities=["text", "audio"],
                     )
                 )
             )
