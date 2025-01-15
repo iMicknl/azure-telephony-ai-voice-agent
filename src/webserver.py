@@ -181,13 +181,13 @@ class WebServer:
                     audio_channel_type=MediaStreamingAudioChannelType.MIXED,
                     start_media_streaming=True,
                     enable_bidirectional=True,
-                    audio_format=AudioFormat.PCM16_K_MONO,  # TODO switch can we use PCM24 for real-time as well?
+                    audio_format=AudioFormat.PCM24_K_MONO,  # TODO switch can we use PCM24 for real-time as well?
                 )
 
                 answer_call_result = await self.call_automation_client.answer_call(
                     incoming_call_context=incoming_call_context,
                     media_streaming=media_streaming_configuration,
-                    callback_url=self.callback_url + "/test",
+                    callback_url=self.callback_url + "/" + event.data["serverCallId"],
                     operation_context="incomingCall",
                 )
 
