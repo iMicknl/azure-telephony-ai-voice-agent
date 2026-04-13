@@ -14,7 +14,7 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "quart>=0.19.9",
     "rtclient",
-    "uvicorn>=0.32.1",
+    "uvicorn>=0.44.0",
 ]
 
 [tool.uv]
