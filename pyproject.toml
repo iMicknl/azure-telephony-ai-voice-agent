@@ -10,7 +10,7 @@ dependencies = [
     "azure-communication-identity>=1.5.0",
     "azure-eventgrid>=4.21.0",
     "azure-identity>=1.19.0",
-    "gunicorn>=23.0.0",
+    "gunicorn>=25.3.0",
     "python-dotenv>=1.0.1",
     "quart>=0.19.9",
     "rtclient",
